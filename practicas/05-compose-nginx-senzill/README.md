@@ -1,4 +1,4 @@
-# Práctica 4 · Docker Compose: nginx sencillo
+# Práctica 5 · Docker Compose: nginx sencillo
 
 > **Enunciado (Aules, "Docker-Compose - Nginx senzill"):** Utilitzant Docker-compose, crea una imatge basada en una de Nginx. A més, deurà exposar el port 80 i utilitzar un volum nomenat `nginxVol` que s'associarà amb el directori `/usr/share/nginx/html`.
 
@@ -144,7 +144,7 @@ docker compose down -v
 ## Copia y pega
 
 ```text
-PRÁCTICA 4 · DOCKER COMPOSE: NGINX SENCILLO
+PRÁCTICA 5 · DOCKER COMPOSE: NGINX SENCILLO
 
 1) Carpeta
    mkdir -p ~/docker/compose-nginx

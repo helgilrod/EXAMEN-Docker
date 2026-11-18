@@ -1,0 +1,34 @@
+Docker Compose — primers passos · Respostes
+
+Exercici 1
+Pregunta 1: El curl mostra la pàgina per defecte d'Apache, "It works!":
+  <title>It works! Apache httpd</title> ... <p>It works!</p>
+Pregunta 2: El contenidor es diu ex1-web-1. Compose li posa el nom
+  <directori>-<servei>-<número>: ex1 (el directori), web (el servei) i 1.
+
+Exercici 2
+Pregunta 3: El curl al port 8080 falla: "Failed to connect to localhost port 8080 ...
+  Couldn't connect to server". Ara el contenidor publica el port 8081, i el de l'exercici 1
+  ja el vam parar amb docker compose down, així que no hi ha res escoltant en el 8080.
+Pregunta 4: En "8081:80", el 8081 és el port de la meua màquina i el 80 és el port del
+  contenidor (on escolta Apache).
+
+Exercici 3
+Pregunta 5: Apareixen 2 contenidors: ex3-web1-1 (httpd) i ex3-web2-1 (nginx).
+Pregunta 6: No. El 8081 (Apache) mostra "It works!" i el 8082 (nginx) mostra
+  "Welcome to nginx!". Cada servei usa una imatge diferent amb la seua pàgina per defecte.
+
+Exercici 4
+Pregunta 7: Sí, el canvi es veu de seguida i no he hagut de reiniciar res. La carpeta web
+  està muntada dins del contenidor, així que Apache llig directament els fitxers de la
+  meua màquina.
+Pregunta 8: Munta la carpeta ./web de la meua màquina (al costat del compose.yaml) dins
+  del contenidor, en /usr/local/apache2/htdocs, que és la carpeta que mostra Apache.
+  El que pose en web/ és el que es veu en la pàgina.
+
+Exercici 5
+Pregunta 9: En el camp «Servidor» hem posat "db". Coincideix amb el nom del servei de la
+  base de dades en el compose.yaml. Compose crea una xarxa per als serveis i dins d'ella
+  cada servei es pot trobar pel seu nom.
+Pregunta 10: La línia "MARIADB_DATABASE: botiga" (dins d'environment del servei db).
+  Quan el contenidor arranca per primera vegada, crea la base de dades botiga.

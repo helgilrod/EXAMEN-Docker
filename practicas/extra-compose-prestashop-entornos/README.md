@@ -1,6 +1,6 @@
-# Práctica 5 · Ejercicios de Docker Compose
+# Extra · Más ejercicios de Docker Compose
 
-> **Tarea de Aules: "Exercicis Docker Compose".** Son los ejercicios de Compose de la lista de clase: Prestashop + MySQL, añadir phpMyAdmin, y una configuración base con preproducción y producción. Si el enunciado de Aules es otro, esta carpeta se adapta.
+> **No es una tarea de Aules.** Son ejercicios de Compose de la lista de prácticas de clase: Prestashop + MySQL, añadir phpMyAdmin, y una configuración base con preproducción y producción. Sirven para practicar redes, variables y ficheros que se sobrescriben.
 
 | Carpeta | Ejercicio | Puertos |
 |---|---|---|
@@ -232,7 +232,7 @@ docker compose -p pro -f docker-compose.yml -f docker-compose.pro.yml down
 ## Copia y pega
 
 ```text
-PRÁCTICA 5 · EJERCICIOS DE DOCKER COMPOSE
+EXTRA · MÁS EJERCICIOS DE DOCKER COMPOSE
 
 ---- 5A · PRESTASHOP + MYSQL 5.7 ----
 mkdir -p ~/docker/prestashop && cd ~/docker/prestashop

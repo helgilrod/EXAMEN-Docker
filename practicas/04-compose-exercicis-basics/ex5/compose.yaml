@@ -1,0 +1,11 @@
+services:
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_ROOT_PASSWORD: arrel123
+      MARIADB_DATABASE: botiga
+
+  adminer:
+    image: adminer
+    ports:
+      - "8090:8080"
