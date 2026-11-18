@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    image: nginx-compose:1.0
+    container_name: nginx_compose
+    ports:
+      - "80:80"
+    volumes:
+      - nginxVol:/usr/share/nginx/html
+
+volumes:
+  nginxVol:

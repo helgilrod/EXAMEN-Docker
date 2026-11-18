@@ -1,0 +1,6 @@
+services:
+  web:
+    ports:
+      - "9003:80"
+    volumes:
+      - ./html/PREPRO:/usr/share/nginx/html

@@ -1,0 +1,6 @@
+services:
+  web:
+    ports:
+      - "9004:80"
+    volumes:
+      - ./html/PRO:/usr/share/nginx/html

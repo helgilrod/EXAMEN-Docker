@@ -1,0 +1,7 @@
+# Plantilla base comuna a tots els entorns.
+# Sense "ports": en els overrides els ports se SUMEN, no es reemplacen.
+services:
+  web:
+    image: nginx
+    volumes:
+      - ./html:/usr/share/nginx/html

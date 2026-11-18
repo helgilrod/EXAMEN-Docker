@@ -1,0 +1,30 @@
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: contenidor_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+    ports:
+      - "3307:3306"
+    networks:
+      - prestashop-net
+    stdin_open: true   # equival a -i
+    tty: true          # equival a -t
+
+  prestashop:
+    image: prestashop/prestashop
+    container_name: contenidor_prestashop
+    environment:
+      DB_SERVER: contenidor_mysql   # ha de coincidir amb el container_name (o el nom del servei: mysql)
+    ports:
+      - "8080:80"
+    networks:
+      - prestashop-net
+    depends_on:
+      - mysql
+    stdin_open: true
+    tty: true
+
+networks:
+  prestashop-net:
+    name: prestashop-net   # sense això es diria <carpeta>_prestashop-net
